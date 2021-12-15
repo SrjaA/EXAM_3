@@ -1,5 +1,4 @@
 class Tomat:
-    # Статические поля
     pomidor = {1:'cvetenie', 2:'plod',3:'red',4:'salad'}
 
 
@@ -15,28 +14,33 @@ class Tomat:
 class TomatoBush:
     def __init__(self):
         self.amount = int(input('input tomato amount: '))
-        self.list = list(TomatoBush.amount)
-    # Статический метод
+        self.tomatoes = list(range(self.amount))
+
+    def grow_all(self):
+        pass
+    def all_are_ripe(self):
+        pass
+    def give_away_all(self):
+        pass
+
+
+class Gardener:
+    def __init__(self):
+        self.name = int(input('input Name: '))
+        super().__init__(SmallHouse.default_area, price)
+
+    def work(self):
+        pass
+
+    def harvest(self):
+        pass
     @staticmethod
-    def default_info():
-        print('Default Name:', Human.default_name)
-        print('Default Age: ', Human.default_age)
+    def knowledge_base(self):
+        print('Help')
 
-
-
-    def buy_house(self, house, discount):
-        final_price = house.final_price(discount)
-        if self.__money >= final_price:
-            self.__make_deal(house, final_price)
-        else:
-            print('Not enough money!')
-
-    # Приватный метод
-    def __make_deal(self, house, price):
-        self.__money -= price
-        self.__house = house
-
-
+Gardener.knowledge_base()
+bush=TomatoBush()
+gardener=Gardener()
 class House:
 
     def __init__(self, area, price):
